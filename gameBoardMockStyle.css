@@ -1,0 +1,65 @@
+table {
+  width: 90%;
+  height: 90%;
+  border: 1px solid black;
+}
+td {
+  width: 5.55%;
+  position: relative;
+  border: 1px solid black;
+}
+tr {
+  height: 5.55%;
+  position: relative;
+  border: 1px solid black;
+}
+td:after {
+  content: '';
+  display: block;
+  margin-top: 100%;
+}
+td .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+td .center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+td .everyOther {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: lightblue;
+}
+td .start {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 4px solid yellow;
+  box-sizing: border-box;
+}
+td .slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 4px solid purple;
+  box-sizing: border-box;
+}
+div {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" href="gameBoardMockStyle.css">
+</head>
+<body>
+
+<h1>Game Board Mock</h1>
+
+<script language="javascript" type="text/javascript">
+	document.write("<table>");
+	for (var a=0; a < 18; a++) {
+	    document.write("<tr>");
+	    for(var b=0; b<18; b++) {
+	    	if (a > 3 && a < 14 && b > 3 && b < 14) {
+	    		document.write("<td><div class=\"center\"></div></td>");
+	    	} else if (a % 2 == 0 && b % 2 == 0 || a % 2 != 0 && b % 2 != 0) {
+	    		if ((a == 0 && (b == 14 || b == 15 || b == 16 || b == 17))
+	    			|| (a == 17 && (b == 0 || b == 1 || b == 2 || b == 3))
+	    			|| (b == 0 && (a == 0 || a == 1 || a == 2 || a == 3))
+	    			|| (b == 17 && (a == 14 || a == 15 || a == 16 || a == 17))) {
+	    			document.write("<td><div class=\"everyOther start\"></div></td>");
+	    		} else {
+	    			if ((a == 3 && (b == 7 || b == 10))
+	    				|| (a == 14 && (b == 7 || b == 10))
+	    				|| (b == 14 && (a == 7 || a == 10))
+	    				|| (b == 3 && (a == 7 || a == 10))) {
+	    				document.write("<td><div class=\"everyOther slide\"></div></td>");
+	    			} else {
+	    				document.write("<td><div class=\"everyOther\"></div></td>");
+	    			}
+	    		}
+	    	} else {
+	    		if ((a == 0 && (b == 14 || b == 15 || b == 16 || b == 17))
+	    			|| (a == 17 && (b == 0 || b == 1 || b == 2 || b == 3))
+	    			|| (b == 0 && (a == 0 || a == 1 || a == 2 || a == 3))
+	    			|| (b == 17 && (a == 14 || a == 15 || a == 16 || a == 17))) {
+	    			document.write("<td><div class=\"content start\"></div></td>");
+	    		} else {
+	    			if ((a == 3 && (b == 7 || b == 10))
+	    				|| (a == 14 && (b == 7 || b == 10))
+	    				|| (b == 14 && (a == 7 || a == 10))
+	    				|| (b == 3 && (a == 7 || a == 10))) {
+	    				document.write("<td><div class=\"content slide\"></div></td>");
+	    			} else {
+	    				document.write("<td><div class=\"content\"></div></td>");
+	    			}
+	    		}
+	    	}
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+</script>
+</body>
+</html> 
